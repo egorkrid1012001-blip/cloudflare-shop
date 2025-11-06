@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NICE GRAMM — Магазин</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header><h1>NICE GRAMM — Пример магазина</h1></header>
+  <main class="container">
+    <section id="step-city" class="step active">
+      <h2>Выберите город</h2>
+      <div class="chips">
+        <button class="chip" data-city="Запорожье">Запорожье</button>
+      </div>
+    </section>
+
+    <section id="step-product" class="step">
+      <h2>Выберите товар</h2>
+      <div id="products"></div>
+      <button id="back-to-city" class="secondary">Назад</button>
+    </section>
+
+    <section id="step-district" class="step">
+      <h2>Выберите район</h2>
+      <div class="chips" id="districts">
+        <button class="chip" data-district="Кичкас">Кичкас</button>
+        <button class="chip" data-district="Космос">Космос</button>
+        <button class="chip" data-district="Правый">Правый</button>
+        <button class="chip" data-district="Центр">Центр</button>
+        <button class="chip" data-district="Бабурка">Бабурка</button>
+        <button class="chip" data-district="Шевчик">Шевчик</button>
+      </div>
+      <button id="back-to-product" class="secondary">Назад</button>
+    </section>
+
+    <section id="step-payment" class="step">
+      <h2>Выберите способ оплаты</h2>
+      <div class="chips">
+        <button class="chip pay" data-pay="Наличные">Наличные</button>
+        <button class="chip pay" data-pay="Карта">Карта</button>
+        <button class="chip pay" data-pay="Monobank QR">Monobank QR</button>
+      </div>
+      <button id="back-to-district" class="secondary">Назад</button>
+    </section>
+
+    <section id="step-contact" class="step">
+      <h2>Контактные данные</h2>
+      <form id="orderForm">
+        <label>Имя<br><input name="name" required></label><br>
+        <label>Телефон<br><input name="phone" required></label><br>
+        <label>Комментарий<br><input name="comment"></label><br>
+        <button type="submit" class="primary">Отправить заказ</button>
+      </form>
+      <button id="back-to-payment" class="secondary">Назад</button>
+    </section>
+
+    <section id="thanks" class="step">
+      <h2>Спасибо — заказ отправлен</h2>
+      <p id="thanksText"></p>
+      <a href="/" class="secondary">На главную</a>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
